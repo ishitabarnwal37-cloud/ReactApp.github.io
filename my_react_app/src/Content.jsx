@@ -67,6 +67,7 @@ function Content(){
             <h1 className='headings'>Podcasts</h1>
             <div className='podcast-card-container'>
                 {podcasts.map(podcast=>(
+                    <Link to={`/details/podcasts/${podcast.id}`} key={podcast.id} className="card-link">
                         <div className='podcast-card'>
                             <img src={podcast.img} alt={podcast.title} />
                             <div className='info'>
@@ -74,6 +75,7 @@ function Content(){
                                 <div className="artist">{podcast.host}</div>
                             </div>
                         </div>
+                    </Link>
                 ))}
             </div>
         </div>
